@@ -1,7 +1,7 @@
 {
-  "name": "uristate",
+  "name": "urn-state",
   "version": "1.0.0",
-  "description": "URI State",
+  "description": "URN State",
   "engines": {
     "iojs": "1.6.2"
   },
@@ -14,10 +14,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:packetloop/uristate.git"
+    "url": "git@github.com:packetloop/urn-state.git"
   },
   "bugs": {
-    "url": "https://github.com/packetloop/uristate/issues"
+    "url": "https://github.com/packetloop/urn-state/issues"
   },
   "author": "Nik Butenko <nik@butenko.me> (http://butenko.me)",
   "license": "MIT",
