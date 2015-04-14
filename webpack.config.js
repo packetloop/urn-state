@@ -71,7 +71,7 @@ const production = assign({}, config, {
 
 const development = assign({}, config, {
   entry: config.entry.concat([
-    'webpack-dev-server/client?http://localhost:3000',
+    'webpack-dev-server/client?http://localhost:3010',
     'webpack/hot/only-dev-server'
   ]),
   plugins: config.plugins.concat(new webpack.HotModuleReplacementPlugin()),

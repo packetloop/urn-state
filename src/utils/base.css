@@ -36,6 +36,19 @@ h4 {
 }
 
 
+
+.uiHandler {
+  margin: 2em;
+  padding: 2em;
+  border-radius: 0.5em;
+  background: rgba(0, 0, 255, 0.05);
+}
+
+.uiHandler .routeHandler {
+  border-color: #0f0;
+}
+
+
 nav ul li {
   display: inline-block;
 }
