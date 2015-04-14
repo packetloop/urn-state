@@ -54,6 +54,18 @@ const AppContainer = React.createClass({
   }
 });
 
+const PartialRoute = React.createClass({
+  render() {
+    return false;
+  }
+});
+
+// PartialRoute is not yet working.
+// Just a proposal of declarative configuration
+const DataUsers = require('./app/ui/Data/Users');
+const DataGroups = require('./app/ui/Data/Groups');
+const VisBar = require('./app/ui/Vis/Bar');
+const VisPie = require('./app/ui/Vis/Pie');
 
 const routes = (
   <Route handler={AppContainer}>
@@ -64,8 +76,24 @@ const routes = (
     </Route>
 
     <Route name="app" path="app" handler={App}>
-      <Route name="main" path="/app" handler={AppMain} />
-      <Route name="help" path="/help" handler={AppHelp} />
+
+      <Route name="main" path="/app" handler={AppMain}>
+
+        <PartialRoute group="mainData" path="tab" value="users" handler={DataUsers} />
+        <PartialRoute group="mainData" path="tab" value="groups" handler={DataGroups} />
+
+        <PartialRoute group="mainVis" path="type" value="bar" handler={VisBar} />
+        <PartialRoute group="mainVis" path="type" value="pie" handler={VisPie} />
+
+      </Route>
+
+      <Route name="help" path="/help" handler={AppHelp}>
+
+        <PartialRoute group="helpData" path="tab" value="users" handler={DataUsers} />
+        <PartialRoute group="helpData" path="tab" value="groups" handler={DataGroups} />
+
+      </Route>
+
     </Route>
 
     <DefaultRoute handler={Landing} />
