@@ -11,7 +11,7 @@ const Vis = require('../ui/Vis');
 
 
 const dataConfig = {
-  data: {
+  mainData: {
     tab: {
       users: require('../ui/Data/Users'),
       groups: require('../ui/Data/Groups')
@@ -19,7 +19,7 @@ const dataConfig = {
   }
 };
 const visConfig = {
-  vis: {
+  mainVis: {
     type: {
       bar: require('../ui/Vis/Bar'),
       pie: require('../ui/Vis/Pie')
@@ -39,10 +39,10 @@ const Main = React.createClass({
 
 
         <div style={{paddingBottom: '2em'}}>
-          <Vis uiConfig={visConfig} type="bar" {...(this.uiState('vis'))} />
+          <Vis uiConfig={visConfig} type="bar" {...(this.uiState('mainVis'))} />
         </div>
         <div style={{paddingBottom: '2em'}}>
-          <Data uiConfig={dataConfig} tab="users" {...(this.uiState('data'))} />
+          <Data uiConfig={dataConfig} tab="users" {...(this.uiState('mainData'))} />
         </div>
 
       </div>

@@ -23,7 +23,6 @@ h4 {
   font-family: Consolas, Menlo, monospace;
 }
 
-
 .routeHandler {
   margin: 2em;
   padding: 2em;
@@ -34,8 +33,6 @@ h4 {
 .routeHandler .routeHandler {
   border-color: #0f0;
 }
-
-
 
 .uiHandler {
   margin: 2em;
@@ -48,10 +45,30 @@ h4 {
   border-color: #0f0;
 }
 
+nav {
+  padding: 1em;
+}
 
 nav ul li {
   display: inline-block;
 }
+
 nav ul li + li {
   margin-left: 0.5em;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 1em;
+  background: rgba(0, 160, 240, 0.9);
+  box-shadow: 0.1em 0.1em 0.05em rgba(0, 0, 0, 0.2);
+  transition: all 150ms;
+}
+
+nav a.active {
+  background: rgba(0, 128, 200, 0.9);
+  box-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.3) inset;
 }

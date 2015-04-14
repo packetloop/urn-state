@@ -8,7 +8,7 @@ require('./utils/base.css');
 
 const React = require('react/addons');
 const {addons: {PureRenderMixin}} = React;
-const {run, Route, DefaultRoute, NotFoundRoute, HistoryLocation,
+const {run, Route, DefaultRoute, NotFoundRoute, HashLocation,
   RouteHandler, Link} = require('./utils/Router');
 
 
@@ -74,6 +74,6 @@ const routes = (
 );
 
 
-run(routes, HistoryLocation, function (Handler, state) {
+run(routes, HashLocation, function (Handler, state) {
   React.render(<Handler {...state} />, document.querySelector('#app'));
 });
