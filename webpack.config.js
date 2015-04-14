@@ -10,7 +10,7 @@ const config = {
     './src/index'
   ],
   output: {
-    path: path.join(__dirname, 'public', 'assets'),
+    path: path.join(__dirname, 'assets'),
     filename: 'bundle.js',
     publicPath: '/assets/'
   },
