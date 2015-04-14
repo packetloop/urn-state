@@ -14,11 +14,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:nkbt/uristate.git"
+    "url": "git@github.com:packetloop/uristate.git"
   },
   "bugs": {
-    "url": "https://github.com/nkbt/uristate/issues"
+    "url": "https://github.com/packetloop/uristate/issues"
   },
+  "author": "Nik Butenko <nik@butenko.me> (http://butenko.me)",
+  "license": "MIT",
   "dependencies": {
     "babel-core": "^4.7.16",
     "babel-loader": "^4.3.0",
